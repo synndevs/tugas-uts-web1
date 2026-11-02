@@ -1,6 +1,6 @@
 # BUKUKITA - Aplikasi Pemesanan Buku Online
 **Nama:** Fachmi Amrullah  
-**NIM:** (Isi NIM kamu)  
+**NIM:** (312510246)  
 **Kelas:** I251B  
 **Mata Kuliah:** Pemrograman Web  
 **Jenis Tugas:** TUGAS UTS
