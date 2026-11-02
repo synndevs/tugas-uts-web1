@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pemesanan Buku - BukuKita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-protected="true">
+
+    <header class="topbar">
+
+        <a href="dashboard.html" class="brand">
+            BukuKita
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="stok.html">Katalog Buku</a>
+
+            <a href="checkout.html" class="active">Pemesanan</a>
+
+            <a href="tracking.html">Tracking</a>
+
+            <button type="button" data-logout class="nav-logout">
+                Keluar
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="page-heading">
+
+            <div>
+                <p class="eyebrow">CHECKOUT</p>
+                <h1>Pemesanan Buku</h1>
+                <p class="muted">
+                    Lengkapi informasi pemesan dan pembayaran.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="panel">
+
+            <form id="checkoutForm">
+
+                <h2>Informasi Pemesan</h2>
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="buyerName">Nama Lengkap</label>
+                        <input type="text" id="buyerName" required>
+                    </div>
+
+                    <div>
+                        <label for="buyerEmail">Email</label>
+                        <input type="email" id="buyerEmail" required>
+                    </div>
+
+                    <div>
+                        <label for="buyerPhone">Nomor Telepon</label>
+                        <input type="tel" id="buyerPhone" required>
+                    </div>
+
+                    <div>
+                        <label for="buyerAddress">Alamat Pengiriman</label>
+                        <input type="text" id="buyerAddress" required>
+                    </div>
+
+                </div>
+
+
+                <hr class="divider">
+
+
+                <h2>Detail Pemesanan</h2>
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="orderBook">Pilih Buku</label>
+                        <select id="orderBook" required>
+                            <option value="">-- Pilih Buku --</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="orderQty">Jumlah Buku</label>
+                        <input type="number" id="orderQty" min="1" value="1" required>
+                    </div>
+
+                    <div>
+                        <label for="shipping">Ekspedisi</label>
+                        <select id="shipping" required>
+                            <option value="JNE">JNE</option>
+                            <option value="Pos Indonesia">Pos Indonesia</option>
+                            <option value="J&T">J&T</option>
+                            <option value="SiCepat">SiCepat</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="packageType">Jenis Paket</label>
+                        <select id="packageType" required>
+                            <option value="Reguler">Reguler</option>
+                            <option value="Express">Express</option>
+                            <option value="Hemat">Hemat</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <hr class="divider">
+
+
+                <h2>Informasi Pembayaran</h2>
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="paymentMethod">Metode Pembayaran</label>
+                        <select id="paymentMethod" required>
+                            <option value="">-- Pilih Pembayaran --</option>
+                            <option value="Transfer Bank">Transfer Bank</option>
+                            <option value="E-Wallet">E-Wallet</option>
+                            <option value="COD">COD</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="orderTotal">Total Pembayaran</label>
+                        <input type="text" id="orderTotal" value="Rp0" readonly>
+                    </div>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button type="button" id="calculateTotal" class="btn btn-secondary">
+                        Hitung Total
+                    </button>
+
+                    <button type="submit" class="btn btn-primary">
+                        Simpan Pemesanan
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <section class="panel">
+
+            <h2>Data Pemesanan</h2>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nomor DO</th>
+                            <th>Nama Pemesan</th>
+                            <th>Judul Buku</th>
+                            <th>Jumlah</th>
+                            <th>Total</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="checkoutTable"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        BukuKita - Aplikasi Pemesanan Buku Online
+    </footer>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

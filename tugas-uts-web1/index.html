@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - BukuKita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-body">
+
+    <div class="login-card">
+
+        <div class="brand-mark">BK</div>
+
+        <h1>BukuKita</h1>
+
+        <p class="muted">
+            Masuk untuk melanjutkan pemesanan buku.
+        </p>
+
+        <form id="loginForm">
+
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Masukkan email"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Masukkan password"
+                required
+            >
+
+            <button type="submit" class="btn btn-primary full-width">
+                Login
+            </button>
+
+        </form>
+
+        <div class="login-links">
+
+            <button type="button" class="text-button" data-modal="forgotModal">
+                Lupa Password
+            </button>
+
+            |
+
+            <button type="button" class="text-button" data-modal="registerModal">
+                Daftar
+            </button>
+
+        </div>
+
+        <p class="hint">
+            Akun demo: rina@gmail.com / rina123
+        </p>
+
+    </div>
+
+
+    <!-- MODAL LUPA PASSWORD -->
+
+    <div class="modal" id="forgotModal">
+
+        <div class="modal-card">
+
+            <button type="button" class="modal-close">&times;</button>
+
+            <h2>Lupa Password</h2>
+
+            <form id="forgotForm">
+
+                <label for="forgotEmail">Email</label>
+
+                <input
+                    type="email"
+                    id="forgotEmail"
+                    required
+                >
+
+                <button type="submit" class="btn btn-primary full-width">
+                    Kirim
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL DAFTAR AKUN -->
+
+    <div class="modal" id="registerModal">
+
+        <div class="modal-card">
+
+            <button type="button" class="modal-close">&times;</button>
+
+            <h2>Daftar Akun</h2>
+
+            <form id="registerForm">
+
+                <label for="registerName">Nama Lengkap</label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    minlength="3"
+                    required
+                >
+
+                <label for="registerEmail">Email</label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    required
+                >
+
+                <label for="registerPassword">Password</label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    minlength="6"
+                    required
+                >
+
+                <button type="submit" class="btn btn-primary full-width">
+                    Buat Akun
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Katalog Buku - BukuKita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-protected="true">
+
+    <header class="topbar">
+
+        <a href="dashboard.html" class="brand">
+            BukuKita
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="stok.html" class="active">Katalog Buku</a>
+
+            <a href="checkout.html">Pemesanan</a>
+
+            <a href="tracking.html">Tracking</a>
+
+            <button type="button" data-logout class="nav-logout">
+                Keluar
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="page-heading">
+
+            <div>
+                <p class="eyebrow">KATALOG BUKU</p>
+                <h1>Informasi Stok Buku</h1>
+                <p class="muted">
+                    Daftar buku dan jumlah stok yang tersedia.
+                </p>
+            </div>
+
+            <a href="checkout.html" class="btn btn-primary">
+                Pesan Buku
+            </a>
+
+        </section>
+
+
+        <section class="panel">
+
+            <div class="toolbar">
+
+                <input
+                    type="search"
+                    id="bookSearch"
+                    placeholder="Cari kode atau judul buku..."
+                >
+
+                <span id="bookTotal"></span>
+
+            </div>
+
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Kode Buku</th>
+                            <th>Judul Buku</th>
+                            <th>Edisi</th>
+                            <th>Stok</th>
+                            <th>Harga</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookTable"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- TAMBAH BUKU -->
+
+        <section class="panel">
+
+            <h2>Tambah Data Buku</h2>
+
+            <form id="addBookForm" class="form-grid">
+
+                <div>
+                    <label for="newCode">Kode Buku</label>
+                    <input type="text" id="newCode" required>
+                </div>
+
+                <div>
+                    <label for="newTitle">Judul Buku</label>
+                    <input type="text" id="newTitle" required>
+                </div>
+
+                <div>
+                    <label for="newEdition">Edisi</label>
+                    <input type="number" id="newEdition" min="1" value="1" required>
+                </div>
+
+                <div>
+                    <label for="newStock">Jumlah Stok</label>
+                    <input type="number" id="newStock" min="0" value="1" required>
+                </div>
+
+                <div>
+                    <label for="newPrice">Harga Buku</label>
+                    <input type="number" id="newPrice" min="1" required>
+                </div>
+
+                <div class="form-action">
+                    <button type="submit" class="btn btn-primary">
+                        Tambahkan Buku
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        BukuKita - Aplikasi Pemesanan Buku Online
+    </footer>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

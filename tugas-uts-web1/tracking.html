@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tracking Pengiriman - BukuKita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-protected="true">
+
+    <header class="topbar">
+
+        <a href="dashboard.html" class="brand">
+            BukuKita
+        </a>
+
+        <nav class="main-nav">
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="stok.html">Katalog Buku</a>
+
+            <a href="checkout.html">Pemesanan</a>
+
+            <a href="tracking.html" class="active">Tracking</a>
+
+            <button type="button" data-logout class="nav-logout">
+                Keluar
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container narrow-container">
+
+        <section class="page-heading">
+
+            <div>
+                <p class="eyebrow">INFORMASI PENGIRIMAN</p>
+                <h1>Tracking Pesanan</h1>
+                <p class="muted">
+                    Masukkan nomor Delivery Order untuk mencari pesanan.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="panel">
+
+            <form id="trackingForm" class="tracking-search">
+
+                <div class="grow">
+
+                    <label for="doNumber">Nomor Delivery Order</label>
+
+                    <input
+                        type="text"
+                        id="doNumber"
+                        placeholder="Contoh: 20230012"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Cari
+                </button>
+
+            </form>
+
+
+            <div id="trackingResult"></div>
+
+        </section>
+
+
+        <section class="panel">
+
+            <h2>Contoh Nomor DO</h2>
+
+            <button type="button" class="text-button" data-fill-do="20230012">
+                20230012
+            </button>
+
+            |
+
+            <button type="button" class="text-button" data-fill-do="20230013">
+                20230013
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        BukuKita - Aplikasi Pemesanan Buku Online
+    </footer>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
